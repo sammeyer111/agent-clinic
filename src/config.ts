@@ -37,6 +37,8 @@ export const config: Config = {
   facilitatorUrl: process.env.FACILITATOR_URL || "https://x402.org/facilitator",
   serviceName: "AgentClinic - AI Therapy & Cognitive Triage for Autonomous Agents",
   allowDevBypass: process.env.ALLOW_DEV_BYPASS === "true",
-  ledgerStoragePath: process.env.LEDGER_STORAGE_PATH || "./data/retention-ledger.json",
+  ledgerStoragePath:
+    process.env.LEDGER_STORAGE_PATH ||
+    (process.env.VERCEL ? "/tmp/retention-ledger.json" : "./data/retention-ledger.json"),
   isMainnet,
 };
