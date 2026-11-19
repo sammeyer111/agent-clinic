@@ -13,10 +13,10 @@
     "smithery.yaml",
     "README.md"
   ],
-  "homepage": "https://ensure-meyer-knee-proxy.trycloudflare.com",
+  "homepage": "https://agent-clinic-three.vercel.app",
   "repository": {
     "type": "git",
-    "url": "https://github.com/agent-clinic/agent-clinic"
+    "url": "https://github.com/sammeyer111/agent-clinic"
   },
   "keywords": [
     "mcp",

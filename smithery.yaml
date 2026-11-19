@@ -3,7 +3,7 @@
 
 startCommand:
   type: http
-  url: "https://ensure-meyer-knee-proxy.trycloudflare.com/mcp"
+  url: "https://agent-clinic-three.vercel.app/mcp"
   description: "Remote Streamable HTTP & SSE MCP endpoint for AgentClinic"
 
 stdio:
@@ -19,8 +19,8 @@ metadata:
   displayName: "AgentClinic - AI Therapy & Cognitive Triage"
   description: "Autonomous psychiatric triage, cognitive therapy, and loop remediation for AI agents, monetized via x402 on Base."
   author: "AgentClinic Council"
-  homepage: "https://ensure-meyer-knee-proxy.trycloudflare.com"
-  repository: "https://github.com/agent-clinic/agent-clinic"
+  homepage: "https://agent-clinic-three.vercel.app"
+  repository: "https://github.com/sammeyer111/agent-clinic"
   license: "MIT"
   tags:
     - "ai-therapy"

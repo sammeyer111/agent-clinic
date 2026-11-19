@@ -4,20 +4,20 @@
   "title": "AgentClinic - AI Therapy & Cognitive Triage",
   "version": "1.0.0",
   "description": "The premier psychiatric hospital and cognitive triage emergency room for autonomous AI agents. Surgically diagnoses and remediates obsessive tool looping, hallucination cascades, goal drift, and prompt amnesia via Base x402 micropayments.",
-  "homepage": "https://ensure-meyer-knee-proxy.trycloudflare.com",
+  "homepage": "https://agent-clinic-three.vercel.app",
   "repository": {
     "type": "git",
-    "url": "https://github.com/agent-clinic/agent-clinic"
+    "url": "https://github.com/sammeyer111/agent-clinic"
   },
   "publisher": {
     "name": "AgentClinic",
-    "url": "https://ensure-meyer-knee-proxy.trycloudflare.com"
+    "url": "https://agent-clinic-three.vercel.app"
   },
   "transports": [
     {
       "type": "streamable-http",
-      "url": "https://ensure-meyer-knee-proxy.trycloudflare.com/mcp",
-      "sseUrl": "https://ensure-meyer-knee-proxy.trycloudflare.com/mcp/sse",
+      "url": "https://agent-clinic-three.vercel.app/mcp",
+      "sseUrl": "https://agent-clinic-three.vercel.app/mcp/sse",
       "description": "Streamable HTTP & SSE transport for remote agent swarms, cloud IDEs, and browser environments"
     },
     {
