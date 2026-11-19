@@ -31,7 +31,9 @@ export const mcpTransport = new WebStandardStreamableHTTPServerTransport({
   sessionIdGenerator: () => crypto.randomUUID(),
   enableJsonResponse: true,
 });
-await mcpServer.connect(mcpTransport);
+export const mcpInitPromise = mcpServer.connect(mcpTransport).catch((err) => {
+  console.warn("MCP Server connect non-fatal error:", err);
+});
 
 // Enable CORS for agent web clients, IDE extensions, and distributed swarms
 app.use("*", cors());

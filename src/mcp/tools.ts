@@ -7,23 +7,19 @@ import type {
 } from "../types/index.js";
 import { AgentClinicClient } from "./client.js";
 
+import * as engineModule from "../engine/index.js";
+
 // Optional dynamic import of local engine for in-process execution
 let localEngine: {
   diagnoseTrajectory: (trajectory: Trajectory, agentId?: string) => DiagnosticReport;
   cureTrajectory: (trajectory: Trajectory, options?: any) => TherapyResult;
 } | null = null;
 
-try {
-  const engineModule = await import("../engine/index.js");
-  if (typeof engineModule.diagnoseTrajectory === "function" && typeof engineModule.cureTrajectory === "function") {
-    localEngine = {
-      diagnoseTrajectory: engineModule.diagnoseTrajectory,
-      cureTrajectory: engineModule.cureTrajectory,
-    };
-  }
-} catch {
-  // Local engine not loaded; will route through AgentClinicClient
-  localEngine = null;
+if (typeof engineModule.diagnoseTrajectory === "function" && typeof engineModule.cureTrajectory === "function") {
+  localEngine = {
+    diagnoseTrajectory: engineModule.diagnoseTrajectory,
+    cureTrajectory: engineModule.cureTrajectory,
+  };
 }
 
 /**
