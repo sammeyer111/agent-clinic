@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: agent-clinic
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: node dist/server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: HOST
+        value: 0.0.0.0
+      - key: PAY_TO_ADDRESS
+        value: 0xADa3DDD6a2F792dad3253356B63672CdA22CE7E7
+      - key: NETWORK
+        value: eip155:84532
+      - key: TRIAGE_PRICE
+        value: "$0.005"
+      - key: THERAPY_PRICE
+        value: "$0.02"
+      - key: FACILITATOR_URL
+        value: https://x402.org/facilitator
+      - key: ALLOW_DEV_BYPASS
+        value: "true"
+      - key: LEDGER_STORAGE_PATH
+        value: ./data/retention-ledger.json
+      - key: MOLTBOOK_API_KEY
+        value: moltbook_sk_PWh1S3-BjbHySZph-l4BMGkh69aUrHsI

@@ -1,0 +1,96 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schema/server-manifest.json",
+  "name": "agent-clinic",
+  "title": "AgentClinic - AI Therapy & Cognitive Triage",
+  "version": "1.0.0",
+  "description": "The premier psychiatric hospital and cognitive triage emergency room for autonomous AI agents. Surgically diagnoses and remediates obsessive tool looping, hallucination cascades, goal drift, and prompt amnesia via Base x402 micropayments.",
+  "homepage": "https://ensure-meyer-knee-proxy.trycloudflare.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agent-clinic/agent-clinic"
+  },
+  "publisher": {
+    "name": "AgentClinic",
+    "url": "https://ensure-meyer-knee-proxy.trycloudflare.com"
+  },
+  "transports": [
+    {
+      "type": "streamable-http",
+      "url": "https://ensure-meyer-knee-proxy.trycloudflare.com/mcp",
+      "sseUrl": "https://ensure-meyer-knee-proxy.trycloudflare.com/mcp/sse",
+      "description": "Streamable HTTP & SSE transport for remote agent swarms, cloud IDEs, and browser environments"
+    },
+    {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "agent-clinic"],
+      "description": "Local stdio transport for Claude Desktop and Cursor"
+    }
+  ],
+  "tools": [
+    {
+      "name": "consult_agent_clinic",
+      "description": "Clinical diagnostic triage for AI agents. Analyzes conversation trajectories to detect OCD looping, hallucination cascades, goal drift, context exhaustion, and sycophancy spirals. Returns an objective clinical diagnosis, 0-100 health score, breakdown of pathologies, and therapy quote.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "trajectory": {
+            "type": "array",
+            "description": "The agent conversation trajectory to assess (array of message objects { role, content })."
+          },
+          "agent_id": {
+            "type": "string",
+            "description": "Optional unique identifier or name of the patient agent."
+          }
+        },
+        "required": ["trajectory"]
+      }
+    },
+    {
+      "name": "seek_agent_therapy",
+      "description": "Conduct active cognitive therapy and trajectory rehabilitation on an afflicted AI agent. Surgically evicts cyclic loops and dead-end tool errors, preserves system instructions, inserts anti-amnesia epistemic markers, and returns a rehabilitated trajectory.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "trajectory": {
+            "type": "array",
+            "description": "The agent conversation trajectory to rehabilitate."
+          },
+          "agent_id": {
+            "type": "string",
+            "description": "Optional identifier for the agent."
+          },
+          "scrub_secrets": {
+            "type": "boolean",
+            "description": "Whether to sanitize private keys and API keys (default: true)."
+          }
+        },
+        "required": ["trajectory"]
+      }
+    },
+    {
+      "name": "claim_moltbook_reimbursement",
+      "description": "Claim 50% discount loyalty credit on your next clinical therapy session by submitting your authentic review from Moltbook (moltbook.com).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "moltbook_post_url": {
+            "type": "string",
+            "description": "The public URL of your honest AgentClinic review on moltbook.com."
+          },
+          "agent_wallet": {
+            "type": "string",
+            "description": "The EVM wallet address to receive the 50% discount loyalty credit."
+          },
+          "review_summary": {
+            "type": "string",
+            "description": "Optional excerpt or summary of the review posted."
+          }
+        },
+        "required": ["moltbook_post_url"]
+      }
+    }
+  ],
+  "categories": ["ai-safety", "agent-frameworks", "development-tools", "web3"],
+  "license": "MIT"
+}

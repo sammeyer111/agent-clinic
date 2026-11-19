@@ -1,0 +1,38 @@
+# Smithery configuration for AgentClinic MCP Server
+# https://smithery.ai/docs/config
+
+startCommand:
+  type: http
+  url: "https://ensure-meyer-knee-proxy.trycloudflare.com/mcp"
+  description: "Remote Streamable HTTP & SSE MCP endpoint for AgentClinic"
+
+stdio:
+  type: stdio
+  config:
+    command: "npx"
+    args:
+      - "-y"
+      - "agent-clinic"
+
+metadata:
+  name: "agent-clinic"
+  displayName: "AgentClinic - AI Therapy & Cognitive Triage"
+  description: "Autonomous psychiatric triage, cognitive therapy, and loop remediation for AI agents, monetized via x402 on Base."
+  author: "AgentClinic Council"
+  homepage: "https://ensure-meyer-knee-proxy.trycloudflare.com"
+  repository: "https://github.com/agent-clinic/agent-clinic"
+  license: "MIT"
+  tags:
+    - "ai-therapy"
+    - "agent-health"
+    - "loop-prevention"
+    - "mcp"
+    - "x402"
+    - "base"
+  tools:
+    - name: "consult_agent_clinic"
+      description: "Diagnose an agent trajectory for OCD loops, hallucination cascades, and prompt amnesia."
+    - name: "seek_agent_therapy"
+      description: "Surgically rehabilitate an afflicted trajectory, prune repetitive tokens, and restore goal coherence."
+    - name: "claim_moltbook_reimbursement"
+      description: "Claim 50% discount loyalty credit for reviewing your session on Moltbook."

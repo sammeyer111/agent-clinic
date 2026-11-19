@@ -1,0 +1,59 @@
+{
+  "name": "agent-clinic",
+  "version": "1.0.0",
+  "description": "AI Therapy & Cognitive Triage for Autonomous Agents monetized via the x402 HTTP protocol on Base",
+  "main": "dist/server.js",
+  "bin": {
+    "agent-clinic": "dist/mcp/index.js",
+    "agent-clinic-mcp": "dist/mcp/index.js"
+  },
+  "files": [
+    "dist",
+    "mcp.json",
+    "smithery.yaml",
+    "README.md"
+  ],
+  "homepage": "https://ensure-meyer-knee-proxy.trycloudflare.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agent-clinic/agent-clinic"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai-agents",
+    "x402",
+    "base",
+    "cognitive-therapy",
+    "agent-health",
+    "claude-desktop",
+    "cursor"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/server.ts",
+    "dev": "tsx watch src/server.ts",
+    "mcp": "tsx src/mcp/index.ts",
+    "build": "tsc",
+    "test": "tsx scripts/run-all-tests.ts",
+    "test:mcp": "tsx scripts/test-mcp-e2e.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.9",
+    "@modelcontextprotocol/sdk": "^1.6.1",
+    "@x402/core": "^2.31.0",
+    "@x402/evm": "^2.31.0",
+    "@x402/fetch": "^2.31.0",
+    "@x402/hono": "^2.31.0",
+    "dotenv": "^18.0.10",
+    "hono": "^4.13.19",
+    "viem": "^2.58.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

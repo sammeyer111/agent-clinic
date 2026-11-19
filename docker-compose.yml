@@ -1,0 +1,27 @@
+services:
+  agent-clinic:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: agent-clinic:latest
+    container_name: agent-clinic-api
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - HOST=0.0.0.0
+      - NETWORK=${NETWORK:-eip155:8453} # Defaults to Base Mainnet in production
+      - PAY_TO_ADDRESS=${PAY_TO_ADDRESS:-0x70997970C51812dc3A010C7d01b50e0d17dc79C8}
+      - TRIAGE_PRICE=${TRIAGE_PRICE:-$0.005}
+      - THERAPY_PRICE=${THERAPY_PRICE:-$0.02}
+      - FACILITATOR_URL=${FACILITATOR_URL:-https://x402.org/facilitator}
+      - LEDGER_STORAGE_PATH=/app/data/retention-ledger.json
+    volumes:
+      - ./data:/app/data
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://127.0.0.1:3000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3

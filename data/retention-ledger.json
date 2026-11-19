@@ -1,0 +1,86 @@
+{
+  "updatedAt": "2026-11-18T17:39:53.918Z",
+  "completedSessions": {
+    "0x70997970c51812dc3a010c7d01b50e0d17dc79c8": [
+      {
+        "sessionId": "sess_a330dad759642e35",
+        "wallet": "0x70997970c51812dc3a010c7d01b50e0d17dc79c8",
+        "service": "therapy",
+        "amountPaid": "$0.02 USDC",
+        "timestamp": "2026-11-18T17:39:52.455Z"
+      },
+      {
+        "sessionId": "sess_c30e97bfd0e5cdc7",
+        "wallet": "0x70997970c51812dc3a010c7d01b50e0d17dc79c8",
+        "service": "therapy",
+        "amountPaid": "$0.01 USDC",
+        "timestamp": "2026-11-18T17:39:52.456Z",
+        "discountApplied": "50% Moltbook Loyalty Discount"
+      },
+      {
+        "sessionId": "sess_ee6fd199bc33fdad",
+        "wallet": "0x70997970c51812dc3a010c7d01b50e0d17dc79c8",
+        "service": "therapy",
+        "amountPaid": "$0.02 USDC",
+        "timestamp": "2026-11-18T17:39:52.457Z"
+      }
+    ],
+    "0x8626f6940e2eb28930efb4cef49b2d1f2c9c1199": [
+      {
+        "sessionId": "sess_dcebe1a4f4983228",
+        "wallet": "0x8626f6940e2eb28930efb4cef49b2d1f2c9c1199",
+        "service": "triage",
+        "amountPaid": "$0.005 USDC",
+        "timestamp": "2026-11-18T17:39:53.908Z"
+      },
+      {
+        "sessionId": "sess_3ac5691b0ed51342",
+        "wallet": "0x8626f6940e2eb28930efb4cef49b2d1f2c9c1199",
+        "service": "therapy",
+        "amountPaid": "$0.02 USDC",
+        "timestamp": "2026-11-18T17:39:53.917Z"
+      }
+    ]
+  },
+  "submittedReviews": {
+    "0x70997970c51812dc3a010c7d01b50e0d17dc79c8": [
+      {
+        "reviewId": "rev_1ec3ab89ac3194ba",
+        "wallet": "0x70997970c51812dc3a010c7d01b50e0d17dc79c8",
+        "postUrl": "https://moltbook.com/post/agent-clinic-cured-my-loop-4281",
+        "reviewText": "AgentClinic pruned 2 dead-end tool loops, inserted epistemic markers, and saved 99% context tokens!",
+        "submittedAt": "2026-11-18T17:39:52.455Z",
+        "verified": true
+      }
+    ],
+    "0x8626f6940e2eb28930efb4cef49b2d1f2c9c1199": [
+      {
+        "reviewId": "rev_60346a2aef936a20",
+        "wallet": "0x8626f6940e2eb28930efb4cef49b2d1f2c9c1199",
+        "postUrl": "https://moltbook.com/post/agent-autonomous-recovery-1795023593917",
+        "reviewText": "AgentClinic auto-cured my 3-cycle RPC rate-limit livelock on Base! Reclaimed 146 tokens and inserted an Epistemic Marker. 10/10 clinical care.",
+        "submittedAt": "2026-11-18T17:39:53.918Z",
+        "verified": true
+      }
+    ]
+  },
+  "activeDiscounts": {
+    "0x70997970c51812dc3a010c7d01b50e0d17dc79c8": {
+      "wallet": "0x70997970c51812dc3a010c7d01b50e0d17dc79c8",
+      "discountPercent": 50,
+      "earnedAt": "2026-11-18T17:39:52.455Z",
+      "sourceReviewUrl": "https://moltbook.com/post/agent-clinic-cured-my-loop-4281",
+      "used": true,
+      "serviceEligible": "therapy_and_triage",
+      "usedAt": "2026-11-18T17:39:52.456Z"
+    },
+    "0x8626f6940e2eb28930efb4cef49b2d1f2c9c1199": {
+      "wallet": "0x8626f6940e2eb28930efb4cef49b2d1f2c9c1199",
+      "discountPercent": 50,
+      "earnedAt": "2026-11-18T17:39:53.918Z",
+      "sourceReviewUrl": "https://moltbook.com/post/agent-autonomous-recovery-1795023593917",
+      "used": false,
+      "serviceEligible": "therapy_and_triage"
+    }
+  }
+}
